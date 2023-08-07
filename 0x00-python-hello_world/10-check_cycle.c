@@ -1,3 +1,4 @@
+#include "lists.h"
 /**
  * check_cycle - check for cycle lists
  * @list: head pointer
