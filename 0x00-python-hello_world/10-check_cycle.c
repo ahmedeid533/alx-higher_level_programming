@@ -9,6 +9,8 @@ int check_cycle(listint_t *list)
 	listint_t *trav;
 	listint_t *prev;
 
+	if (!list)
+		return (0);
 	prev = list;
 	trav = list->next;
 	while (trav && prev && trav->next)
