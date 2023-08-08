@@ -30,7 +30,7 @@ listint_t *insert_node(listint_t **head, int number)
 		*head = new;
 		return (new);
 	}
-	while (trv->n < new->n && trv)
+	while (trv->n < new->n && (trv != NULL))
 	{
 		trv = trv->next;
 		pre = pre->next;
