@@ -34,6 +34,6 @@ listint_t *insert_node(listint_t **head, int number)
 		pre = pre->next;
 	}
 	pre->next = new;
-	new->next = trav;
+	new->next = trv;
 	return (new);
 }
