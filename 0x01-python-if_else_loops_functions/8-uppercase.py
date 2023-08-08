@@ -7,4 +7,3 @@ def uppercase(str):
         else:
             cpy += str[i]
     print(cpy)
-uppercase("Best")
