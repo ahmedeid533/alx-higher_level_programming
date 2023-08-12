@@ -1,1 +1,1 @@
-1
+tuple_a[1] if len(tuple_a) > 1 else 0  
