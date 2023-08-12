@@ -14,8 +14,6 @@ int is_palindrome(listint_t **head)
 	size = list_len(head);
 	array = malloc(sizeof(int) * size);
 	trav = *head;
-	if (size % 2)
-		return (0);
 	for (i = 0; i < size; i++)
 	{
 		array[i] = trav->n;
@@ -26,6 +24,7 @@ int is_palindrome(listint_t **head)
 				return (0);
 		}
 	}
+	free(array);
 	return (1);
 
 
