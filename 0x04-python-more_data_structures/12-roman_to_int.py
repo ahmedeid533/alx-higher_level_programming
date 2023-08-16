@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
     if not isinstance(roman_string, str) or not roman_string:
-        return None
+        return 0
     romv = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
     dicM = {'MMM': 3000, 'MM': 2000, 'M': 1000}
     dicC = {'CM': 900, 'DCCC': 800, 'DCC': 700, 'DC': 600,  'CD': 400, 'D': 500,'CCC': 300,
@@ -32,4 +32,4 @@ def roman_to_int(roman_string):
             i += len(k)
             result += v
             break
-    return result
+    return int(result)
