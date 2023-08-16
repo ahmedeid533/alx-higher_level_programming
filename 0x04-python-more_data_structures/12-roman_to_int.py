@@ -33,7 +33,3 @@ def roman_to_int(roman_string):
             result += v
             break
     return result
-
-
-roman_number = "MLXVI"
-print("{} = {}".format(roman_number, roman_to_int(roman_number)))
