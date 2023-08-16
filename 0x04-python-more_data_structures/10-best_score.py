@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def best_score(a_dictionary):
-    if not list(a_dictionary):
+    if not a_dictionary:
         return None
     max_k = list(a_dictionary)[0]
     max_v = a_dictionary[max_k]
