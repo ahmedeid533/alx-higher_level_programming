@@ -34,10 +34,10 @@ class Square:
 
     def area(self):
         """calculate area"""
-        
+
         return (self.__size ** 2)
 
     def __repr__(self):
         """size"""
 
-        return self.__size
+        return self.area()
