@@ -1,4 +1,4 @@
 #!/usr/bin/python3
-class MyClass:
+class Square:
     def __init__(self):
-        self.instance_attribute = {}
+        self.__dict__ = "{}"
