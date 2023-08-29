@@ -6,7 +6,7 @@ class Square:
     """test test"""
 
     __size = 0
-    __position = 0
+    __position = (0, 0)
 
     @property
     def size(self):
