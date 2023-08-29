@@ -71,7 +71,7 @@ class Square:
 
         temp = ""
         if self.__size == 0:
-            temp = ""
+            temp = "\n"
         else:
             for newL in range(self.__position[1]):
                 temp += "\n"
