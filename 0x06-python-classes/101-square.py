@@ -53,21 +53,25 @@ class Square:
     def my_print(self):
         """print square of #"""
 
+        self.temp = ""
         if self.__size == 0:
             print("")
         else:
             for newL in range(self.__position[1]):
                 print("")
+                self.temp += "\n"
 
             for i in range(self.__size):
                 for newS in range(self.__position[0]):
                     print(" ", end="")
+                    self.temp += " "
                 for j in range(self.__size):
                     print("#", end="")
+                    self.temp += "#"
                 print("")
+                self.temp += "\n"
 
     def __str__(self):
         """"print square"""
 
-        
-        return self.my_print()
+        return self.temp
