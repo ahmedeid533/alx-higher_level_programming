@@ -74,4 +74,5 @@ class Square:
     def __str__(self):
         """"print square"""
 
+        self.my_print()
         return self.temp
