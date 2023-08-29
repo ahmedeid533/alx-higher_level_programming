@@ -5,7 +5,22 @@
 class Square:
     """test test"""
 
-    __size = 0
+    def __init__(self, size=0, position=(0, 0)):
+        """why this"""
+
+        if (not isinstance(position, tuple)
+                or not isinstance(position[0], int)
+                or not isinstance(position[1], int)
+                or position[0] < 0
+                or position[1] < 0
+                or len(position) != 2):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        elif not isinstance(size, int):
+            raise TypeError("size must be an integer")
+        elif size < 0:
+            raise ValueError("size must be >= 0")
+        self.__size = size
+        self.__position = position
 
     @property
     def size(self):
@@ -19,7 +34,7 @@ class Square:
 
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
-        if value < 0:
+        elif value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
 
@@ -41,23 +56,6 @@ class Square:
                 or len(value) != 2):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
-
-    def __init__(self, size=0, position=(0, 0)):
-        """why this"""
-
-        if (not isinstance(position, tuple) or
-                not isinstance(position[0], int)
-                or not isinstance(position[1], int)
-                or position[0] < 0
-                or position[1] < 0
-                or len(position) != 2):
-            raise TypeError("position must be a tuple of 2 positive integers")
-        elif not isinstance(size, int):
-            raise TypeError("size must be an integer")
-        elif size < 0:
-            raise ValueError("size must be >= 0")
-        self.__size = size
-        self.__position = position
 
     def area(self):
         """calculate area"""
