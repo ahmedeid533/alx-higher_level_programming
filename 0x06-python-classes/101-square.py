@@ -82,4 +82,4 @@ class Square:
                 for j in range(self.__size):
                     temp += "#"
                 temp += "\n"
-        return temp
+        return str(temp)
