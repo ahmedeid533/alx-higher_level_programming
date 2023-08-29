@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+
 """test test"""
 
 
@@ -34,12 +34,15 @@ class Square:
     def position(self, value):
         """pos set"""
 
-        testL = len(value) != 2
-        testT = not isinstance(value[0], int)
-        testT_ = not isinstance(value[1], int)
+        testT = not isinstance(value, tuple)
+        if testT:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        testT1 = not isinstance(value[0], int)
+        testT2 = not isinstance(value[1], int)
         testV1 = value[0] < 0
         testV2 = value[1] < 0
-        test = testL or testT or testT_ or testV1 or testV2
+        testL = len(value) != 2
+        test = testT1 or testT2 or testV1 or testV2 or testL
         if test:
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
@@ -47,12 +50,15 @@ class Square:
     def __init__(self, size=0, position=(0, 0)):
         """why this"""
 
-        testL = len(position) != 2
-        testT = not isinstance(position[0], int)
-        testT_ = not isinstance(position[1], int)
+        testT = not isinstance(position, tuple)
+        if testT:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        testT1 = not isinstance(position[0], int)
+        testT2 = not isinstance(position[1], int)
         testV1 = position[0] < 0
         testV2 = position[1] < 0
-        test = testL or testT or testT_ or testV1 or testV2
+        testL = len(position) != 2
+        test = testT1 or testT2 or testV1 or testV2 or testL
         if test:
             raise TypeError("position must be a tuple of 2 positive integers")
         elif not isinstance(size, int):
@@ -81,3 +87,19 @@ class Square:
                 for j in range(self.__size):
                     print("#", end="")
                 print("")
+
+
+my_square_1 = Square(3)
+my_square_1.my_print()
+
+print("--")
+
+my_square_2 = Square(3, (1, 1))
+my_square_2.my_print()
+
+print("--")
+
+my_square_3 = Square(3, (7, 7))
+my_square_3.my_print()
+
+print("--")
