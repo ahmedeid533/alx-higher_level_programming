@@ -4,7 +4,7 @@ The ``2-matrix_divided`` module
 Using ``matrix_divided``
 -------------------
 
-This is an 0-add_integer text file in reStructuredText format.  First import
+This is an 2-matrix_divided text file in reStructuredText format.  First import
 ``matrix_divided`` from the ``2-matrix_divided.py`` module:
 
     >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
