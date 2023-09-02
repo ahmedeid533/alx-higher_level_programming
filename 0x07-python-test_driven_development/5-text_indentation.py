@@ -1,4 +1,4 @@
-#!/usr/bin/python3g
+#!/usr/bin/python3
 """text example"""
 
 def text_indentation(text):

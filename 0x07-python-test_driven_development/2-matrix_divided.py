@@ -1,4 +1,4 @@
-#!/usr/bin/python3g
+#!/usr/bin/python3
 """divide example"""
 
 
