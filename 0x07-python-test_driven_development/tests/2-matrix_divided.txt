@@ -30,6 +30,11 @@ Now use it:
     >>> print(matrix_divided(matrix, 3))
     [[0.5, 0.67, 1.1], [1.33, 1.67, 2.2]]
 
+    >>> matrix = [[]]
+    >>> print(matrix_divided(matrix, 3))
+    [[]]
+
+
 deal with invalid matrcies.
 
 ::
