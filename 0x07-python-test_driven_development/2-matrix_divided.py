@@ -15,10 +15,11 @@ def matrix_divided(matrix, div):
 
     if not isinstance(matrix, list):
         raise TypeError(massage)
-    row_len = len(matrix[0])
+    row_len = 0
     for matRow in matrix:
         if not isinstance(matRow, list):
             raise TypeError(massage)
+        row_len = len(matrix[0])
         if len(matRow) != row_len:
             raise TypeError("Each row of the matrix must have the same size")
         for item in matRow:
