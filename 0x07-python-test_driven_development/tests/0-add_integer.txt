@@ -23,7 +23,11 @@ Now use it:
     >>> add_integer(100.3, -2.9)
     98
 
-deal with errors
+    >>> add_integer(99.3, -2)
+    97
+
+deal with tybe errors
+
 ::
     >>> add_integer(4, "School")
     Traceback (most recent call last):
@@ -37,13 +41,26 @@ deal with errors
     Traceback (most recent call last):
     TypeError: a must be an integer
 
+    >>> add_integer(4, True)
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+    >>> add_integer(4, None)
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+    >>> add_integer("ho", "hi")
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
 deal with convertions errors
+
 ::
     >>> add_integer(float('inf'))
     Traceback (most recent call last):
     OverflowError: cannot convert float infinity to integer
 
-    >>> add_integer(2, float('inf'))
+    >>> add_integer(float('inf'), 4)
     Traceback (most recent call last):
     OverflowError: cannot convert float infinity to integer
 
@@ -55,8 +72,6 @@ deal with NaN numbers.
     Traceback (most recent call last):
     ValueError: cannot convert float NaN to integer
 
-::
-
-    >>> add_integer(2, float('nan'))
+    >>> add_integer(5, float('nan'))
     Traceback (most recent call last):
     ValueError: cannot convert float NaN to integer
