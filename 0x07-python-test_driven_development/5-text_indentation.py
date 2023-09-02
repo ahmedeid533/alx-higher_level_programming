@@ -11,4 +11,7 @@ def text_indentation(text):
     text = text.replace(':', ':\n\n@')
     text = text.split("@")
     for stR in text:
-        print(stR.strip(" "),end="")
+        stR = stR.replace('\n ', '\n@')
+        stR = stR.split("@")
+        for i in stR:
+            print(i.strip(" "),end="")
