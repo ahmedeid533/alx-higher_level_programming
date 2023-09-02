@@ -45,7 +45,7 @@ deal with spaces
     Hoy Hoy Hoy.
     <BLANKLINE>
 
-deal with after spaces
+deal with no spicial char
 
 ::
 
