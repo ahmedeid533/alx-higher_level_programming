@@ -5,6 +5,9 @@
 class Rectangle:
     """rectangel class"""
 
+    __height = 0
+    __width = 0
+
     @property
     def width(self):
         """get W"""
