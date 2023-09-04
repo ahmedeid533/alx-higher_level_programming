@@ -9,6 +9,11 @@ class Rectangle:
     __width = 0
     number_of_instances = 0
     print_symbol = "#"
+
+    @print_symbol.setter
+    def setter(self, value):
+        type(self).print_symbol = value
+
     @property
     def width(self):
         """get W"""
