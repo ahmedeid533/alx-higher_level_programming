@@ -58,6 +58,7 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
+        """yea square is rect"""
         return (cls(size, size))
 
     @staticmethod
