@@ -59,7 +59,7 @@ class Rectangle:
         """"print rect of #"""
 
         temp = ""
-        if self.perimeter == 0:
+        if self.__width == 0 or self.__height == 0:
             temp = ""
         else:
             for i in range(self.__height):
