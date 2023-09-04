@@ -8,6 +8,7 @@ class Rectangle:
     __height = 0
     __width = 0
     number_of_instances = 0
+    
     @property
     def width(self):
         """get W"""
