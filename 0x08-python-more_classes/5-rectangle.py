@@ -7,7 +7,7 @@ class Rectangle:
 
     __height = 0
     __width = 0
-
+    number_of_instances = 0
     @property
     def width(self):
         """get W"""
@@ -43,6 +43,7 @@ class Rectangle:
     def __init__(self, width=0, height=0):
         self.height = height
         self.width = width
+        self.number_of_instances += 1
 
     def area(self):
         """calculate area"""
@@ -74,4 +75,5 @@ class Rectangle:
         return (f"Rectangle({str(self.__width)}, {str(self.__height)})")
 
     def __del__(self):
-        print ("Bye rectangle...")
+        self.number_of_instances -= 1
+        print("Bye rectangle...")
