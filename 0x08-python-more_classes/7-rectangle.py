@@ -59,16 +59,14 @@ class Rectangle:
     def __str__(self):
         """"print rect of #"""
 
-        temp = ""
         if self.__width == 0 or self.__height == 0:
-            temp = ""
-        else:
-            for i in range(self.__height):
-                for j in range(self.__width):
-                    temp += type(self).print_symbol
-                if i < self.__height - 1:
-                    temp += "\n"
-        return str(temp)
+            return ""
+        rect = []
+        for i in range(self.__height):
+            [rect.append(str(self.print_symbol)) for j in range(self.__width)]
+            if i != self.__height - 1:
+                rect.append("\n")
+        return ("".join(rect))
 
     def __repr__(self):
         """Return the opject inti"""
