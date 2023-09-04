@@ -43,7 +43,7 @@ class Rectangle:
     def __init__(self, width=0, height=0):
         self.height = height
         self.width = width
-        type(self).number_of_instances += 1
+        Rectangle.number_of_instances += 1
 
     def area(self):
         """calculate area"""
@@ -55,11 +55,6 @@ class Rectangle:
             return 0
         else:
             return (2 * (self.__width + self.__height))
-
-    @classmethod
-    def square(cls, size=0):
-        """yea square is rect"""
-        return (cls(size, size))
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
@@ -88,5 +83,10 @@ class Rectangle:
         return (f"Rectangle({str(self.__width)}, {str(self.__height)})")
 
     def __del__(self):
-        type(self).number_of_instances -= 1
+        Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
+
+    @classmethod
+    def square(cls, size=0):
+        """yea square is rect"""
+        return (cls(size, size))
