@@ -5,9 +5,8 @@
 class Rectangle:
     """rectangel class"""
 
-    __height = 0
-    __width = 0
     number_of_instances = 0
+    print_symbol = "#"
 
     @property
     def width(self):
@@ -57,19 +56,27 @@ class Rectangle:
         else:
             return (2 * (self.__width + self.__height))
 
+    @staticmethod
+    def bigger_or_equal(rect_1, rect_2):
+        if not isinstance(rect_1, Rectangle):
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        if not isinstance(rect_2, Rectangle):
+            raise TypeError("rect_2 must be an instance of Rectangle")
+        if rect_1.area() >= rect_2.area():
+            return (rect_1)
+        return (rect_2)
+
     def __str__(self):
         """"print rect of #"""
 
-        temp = ""
         if self.__width == 0 or self.__height == 0:
-            temp = ""
-        else:
-            for i in range(self.__height):
-                for j in range(self.__width):
-                    temp += "#"
-                if i < self.__height - 1:
-                    temp += "\n"
-        return str(temp)
+            return ""
+        rect = []
+        for i in range(self.__height):
+            [rect.append(str(self.print_symbol)) for j in range(self.__width)]
+            if i != self.__height - 1:
+                rect.append("\n")
+        return ("".join(rect))
 
     def __repr__(self):
         """Return the opject inti"""
