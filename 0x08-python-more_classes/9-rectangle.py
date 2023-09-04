@@ -86,7 +86,12 @@ class Rectangle:
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
 
+
     @classmethod
     def square(cls, size=0):
-        """yea square is rect"""
+        """Return a new Rectangle with width and height equal to size.
+
+        Args:
+            size (int): The width and height of the new Rectangle.
+        """
         return (cls(size, size))
