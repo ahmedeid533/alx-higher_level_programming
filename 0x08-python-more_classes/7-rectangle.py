@@ -5,8 +5,6 @@
 class Rectangle:
     """rectangel class"""
 
-    __height = 0
-    __width = 0
     number_of_instances = 0
     print_symbol = "#"
 
