@@ -41,9 +41,9 @@ class Rectangle:
         self.__height = value
 
     def __init__(self, width=0, height=0):
+        type(self).number_of_instances += 1
         self.height = height
         self.width = width
-        Rectangle.number_of_instances += 1
 
     def area(self):
         """calculate area"""
@@ -66,6 +66,10 @@ class Rectangle:
             return (rect_1)
         return (rect_2)
 
+    @classmethod
+    def square(cls, size=0):
+        return (cls(size, size))
+
     def __str__(self):
         """"print rect of #"""
 
@@ -83,14 +87,5 @@ class Rectangle:
         return (f"Rectangle({str(self.__width)}, {str(self.__height)})")
 
     def __del__(self):
-        Rectangle.number_of_instances -= 1
+        type(self).number_of_instances -= 1
         print("Bye rectangle...")
-
-    @classmethod
-    def square(cls, size=0):
-        """Return a new Rectangle with width and height equal to size.
-
-        Args:
-            size (int): The width and height of the new Rectangle.
-        """
-        return (cls(size, size))
