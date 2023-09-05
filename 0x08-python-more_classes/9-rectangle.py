@@ -79,8 +79,10 @@ class Rectangle:
         return ("".join(rect))
 
     def __repr__(self):
-        """Return the opject inti"""
-        return (f"Rectangle({str(self.__width)}, {str(self.__height)})")
+        """Return the string representation of the Rectangle."""
+        rect = "Rectangle(" + str(self.__width)
+        rect += ", " + str(self.__height) + ")"
+        return (rect)
 
     def __del__(self):
         """test """
