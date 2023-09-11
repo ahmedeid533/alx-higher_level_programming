@@ -28,37 +28,37 @@ deal with non-integer argument
     >>> base_g.integer_validator("val", "num")
     Traceback (most recent call last):
     	      ...
-    TypeError: name must be an integer
+    TypeError: val must be an integer
 
     >>> base_g = BaseGeometry()
     >>> base_g.integer_validator("bool", True)
     Traceback (most recent call last):
     	      ...
-    TypeError: name must be an integer
+    TypeError: bool must be an integer
 
     >>> base_g = BaseGeometry()
     >>> base_g.integer_validator("arg", (8,))
     Traceback (most recent call last):
     	      ...
-    TypeError: age must be an integer
+    TypeError: arg must be an integer
 
     >>> base_g = BaseGeometry()
     >>> base_g.integer_validator("val", [-9])
     Traceback (most recent call last):
     	      ...
-    TypeError: age must be an integer
+    TypeError: val must be an integer
 
     >>> base_g = BaseGeometry()
     >>> base_g.integer_validator("cal", {8, 5})
     Traceback (most recent call last):
               ...
-    TypeError: age must be an integer
+    TypeError: cal must be an integer
 
     >>> base_g = BaseGeometry()
     >>> base_g.integer_validator("none", None)
     Traceback (most recent call last):
               ...
-    TypeError: age must be an integer
+    TypeError: none must be an integer
 
 deal with value error
 
