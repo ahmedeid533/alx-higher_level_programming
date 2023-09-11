@@ -1,61 +1,61 @@
-The ``7-base_geometry.py`` module
+The ``7-basegeometry.py`` module
 ======================
 
 Using ``BaseGeometry``
 -------------------
 
-This is an 7-base_geometry.py text file in reStructuredText format.  First import
-``BaseGeometry`` from the ``7-base_geometry.py`` module:
+This is an 7-basegeometry.py text file in reStructuredText format.  First import
+``BaseGeometry`` from the ``7-basegeometry.py`` module:
 
-    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+    >>> BaseGeometry = __import__('7-basegeometry').BaseGeometry
 
 Now use it:
 
-	>>> base_g = BaseGeometry()
-    >>> base_g.area()
+	>>> baseg = BaseGeometry()
+    >>> baseg.area()
     Traceback (most recent call last):
     	      ...
     Exception: area() is not implemented
     
-    >>> base_g = BaseGeometry()
-    >>> base_g.integer_validator("name", 5)
+    >>> baseg = BaseGeometry()
+    >>> baseg.integer_validator("name", 5)
 
 deal with non-integer argument
 
 ::
 
-    >>> base_g = BaseGeometry()
-    >>> base_g.integer_validator("val", "num")
+    >>> baseg = BaseGeometry()
+    >>> baseg.integer_validator("val", "num")
     Traceback (most recent call last):
     	      ...
     TypeError: val must be an integer
 
-    >>> base_g = BaseGeometry()
-    >>> base_g.integer_validator("bool", True)
+    >>> baseg = BaseGeometry()
+    >>> baseg.integer_validator("bool", True)
     Traceback (most recent call last):
     	      ...
     TypeError: bool must be an integer
 
-    >>> base_g = BaseGeometry()
-    >>> base_g.integer_validator("arg", (8,))
+    >>> baseg = BaseGeometry()
+    >>> baseg.integer_validator("arg", (8,))
     Traceback (most recent call last):
     	      ...
     TypeError: arg must be an integer
 
-    >>> base_g = BaseGeometry()
-    >>> base_g.integer_validator("val", [-9])
+    >>> baseg = BaseGeometry()
+    >>> baseg.integer_validator("val", [-9])
     Traceback (most recent call last):
     	      ...
     TypeError: val must be an integer
 
-    >>> base_g = BaseGeometry()
-    >>> base_g.integer_validator("cal", {8, 5})
+    >>> baseg = BaseGeometry()
+    >>> baseg.integer_validator("cal", {8, 5})
     Traceback (most recent call last):
               ...
     TypeError: cal must be an integer
 
-    >>> base_g = BaseGeometry()
-    >>> base_g.integer_validator("none", None)
+    >>> baseg = BaseGeometry()
+    >>> baseg.integer_validator("none", None)
     Traceback (most recent call last):
               ...
     TypeError: none must be an integer
@@ -64,14 +64,14 @@ deal with value error
 
 ::
 
-    >>> base_g = BaseGeometry()
-    >>> base_g.integer_validator("name", -45)
+    >>> baseg = BaseGeometry()
+    >>> baseg.integer_validator("name", -45)
     Traceback (most recent call last):
     	      ...
     ValueError: name must be greater than 0
 
-    >>> base_g = BaseGeometry()
-    >>> base_g.integer_validator("name", 0)
+    >>> baseg = BaseGeometry()
+    >>> baseg.integer_validator("name", 0)
     Traceback (most recent call last):
     	      ...
     ValueError: name must be greater than 0
@@ -80,32 +80,32 @@ deal with giniral error
 
 ::
 
-    >>> base_g = BaseGeometry()
-    >>> base_g.integer_validator("val")
+    >>> baseg = BaseGeometry()
+    >>> baseg.integer_validator("val")
     Traceback (most recent call last):
     	      ...
     TypeError: integer_validator() missing 1 required positional argument: 'value'
 
-    >>> base_g = BaseGeometry()
-    >>> base_g.integer_validator()
+    >>> baseg = BaseGeometry()
+    >>> baseg.integer_validator()
     Traceback (most recent call last):
     	      ...
     TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
-    >>> base_g = BaseGeometry()
-    >>> base_g.integer_validator("num", 1, 2)
+    >>> baseg = BaseGeometry()
+    >>> baseg.integer_validator("num", 1, 2)
     Traceback (most recent call last):
     	      ...
     TypeError: integer_validator() takes 3 positional arguments but 4 were given
 
-    >>> base_g = BaseGeometry()
-    >>> base_g.area(2)
+    >>> baseg = BaseGeometry()
+    >>> baseg.area(2)
     Traceback (most recent call last):
     	      ...
     TypeError: area() takes 1 positional argument but 2 were given
 
-    >>> base_g = BaseGeometry()
-    >>> base_g.area(3, 7)
+    >>> baseg = BaseGeometry()
+    >>> baseg.area(3, 7)
     Traceback (most recent call last):
     	      ...
     TypeError: area() takes 1 positional argument but 3 were given
