@@ -1,11 +1,11 @@
 The ``7-base_geometry.py`` module
 ======================
 
-Using ``MyList``
+Using ``BaseGeometry``
 -------------------
 
 This is an 7-base_geometry.py text file in reStructuredText format.  First import
-``MyList`` from the ``7-base_geometry.py`` module:
+``BaseGeometry`` from the ``7-base_geometry.py`` module:
 
     >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
