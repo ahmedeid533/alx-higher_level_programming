@@ -1,12 +1,13 @@
 #!/usr/bin/python3
 """class Rectangle"""
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
     """class Rectangle implemntation"""
     def __init__(self, width, height):
-        BaseGeometry.integer_validator(width)
-        BaseGeometry.integer_validator(height)
+        self.integer_validator(width)
+        self.integer_validator(height)
         self.__width = width
         self.__height = height
 
