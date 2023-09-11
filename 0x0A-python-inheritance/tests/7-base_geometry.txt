@@ -7,7 +7,7 @@ Using ``BaseGeometry``
 This is an 7-basegeometry.py text file in reStructuredText format.  First import
 ``BaseGeometry`` from the ``7-basegeometry.py`` module:
 
-    >>> BaseGeometry = __import__('7-basegeometry').BaseGeometry
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 Now use it:
 
@@ -16,6 +16,7 @@ Now use it:
     Traceback (most recent call last):
     	      ...
     Exception: area() is not implemented
+    >>>
     
     >>> baseg = BaseGeometry()
     >>> baseg.integer_validator("name", 5)
@@ -29,6 +30,7 @@ deal with non-integer argument
     Traceback (most recent call last):
     	      ...
     TypeError: val must be an integer
+    >>>
 
     >>> baseg = BaseGeometry()
     >>> baseg.integer_validator("bool", True)

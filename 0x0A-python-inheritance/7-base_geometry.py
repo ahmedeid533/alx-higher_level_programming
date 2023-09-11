@@ -2,7 +2,7 @@
 """class"""
 
 
-class BaseGeometry():
+class BaseGeometry:
     """class"""
     def area(self):
         """raise error"""
