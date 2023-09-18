@@ -35,13 +35,13 @@ class Square(Rectangle):
             for arg in args:
                 if arg:
                     values[i] = arg
-                    i+=1
+                    i += 1
         elif kwargs and len(kwargs) != 0:
             for key, value in kwargs.items():
                 for k in keys:
                     if k == key:
                         values[i] = value
-                    i+=1
+                    i += 1
                 i = 0
         self.id = values[0]
         self.size = values[1]

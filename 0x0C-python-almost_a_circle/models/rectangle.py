@@ -103,9 +103,9 @@ class Rectangle(Base):
     def __str__(self):
         """"print rect info"""
         return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
-                                                         self.x, self.y,
-                                                         self.width,
-                                                         self.height))
+                                                        self.x, self.y,
+                                                        self.width,
+                                                        self.height))
 
     def update(self, *args, **kwargs):
         """update exist rect"""
@@ -116,13 +116,13 @@ class Rectangle(Base):
             for arg in args:
                 if arg:
                     values[i] = arg
-                    i+=1
+                    i += 1
         elif kwargs and len(kwargs) != 0:
             for key, value in kwargs.items():
                 for k in keys:
                     if k == key:
                         values[i] = value
-                    i+=1
+                    i += 1
                 i = 0
         self.id = values[0]
         self.width = values[1]
