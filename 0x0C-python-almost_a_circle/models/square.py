@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """class square"""
-Rectangle = __import__('rectangle').Rectangle
+from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
