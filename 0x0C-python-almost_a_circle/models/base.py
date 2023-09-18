@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+
 """module"""
 import json
 
@@ -49,7 +49,7 @@ class Base:
             else:
                 opj = cls(1)
             opj.update(**dictionary)
-            return new
+            return opj
 
     @classmethod
     def load_from_file(cls):
