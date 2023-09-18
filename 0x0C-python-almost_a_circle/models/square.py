@@ -5,6 +5,7 @@ from models.rectangle import Rectangle
 
 class Square(Rectangle):
     """imp of the class"""
+
     def __init__(self, size, x=0, y=0, id=None):
         """init of init of square rect"""
         super().__init__(size, size, x, y, id)
@@ -13,7 +14,7 @@ class Square(Rectangle):
         """"print square info"""
         return ("[Square] ({}) {}/{} - {}".format(self.id,
                                                   self.x, self.y,
-                                                  self.width))
+                                                  self.size))
 
     @property
     def size(self):
@@ -50,10 +51,12 @@ class Square(Rectangle):
 
     def to_dictionary(self):
         """square to dict """
+
         diction = {
             "id": self.id,
             "size": self.size,
             "x": self.x,
             "y": self.y
         }
+
         return diction
