@@ -51,10 +51,12 @@ class Square(Rectangle):
 
     def to_dictionary(self):
         """square to dict """
+
         diction = {
             "id": self.id,
             "size": self.size,
             "x": self.x,
             "y": self.y
         }
+
         return diction
