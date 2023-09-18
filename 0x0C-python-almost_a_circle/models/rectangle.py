@@ -6,6 +6,14 @@ from models.base import Base
 class Rectangle(Base):
     """rect"""
 
+    def __init__(self, width, height, x=0, y=0, id=None):
+        """init the rect"""
+        self.x = x
+        self.y = y
+        self.height = height
+        self.width = width
+        super().__init__(id)
+
     @property
     def width(self):
         """get W"""
@@ -69,14 +77,6 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
-
-    def __init__(self, width, height, x=0, y=0, id=None):
-        """init the rect"""
-        self.x = x
-        self.y = y
-        self.height = height
-        self.width = width
-        super().__init__(id)
 
     def area(self):
         """calculate area"""
