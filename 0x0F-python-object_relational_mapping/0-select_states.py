@@ -8,4 +8,6 @@ if __name__ == "__main__":
 	cur.execute("SELECT * FROM states ORDER BY id ASC") # HERE I have to know SQL to grab all states in my database
 	query_rows = cur.fetchall()
 	for state in query_rows: # HERE: no SQL query, only objects!
-		print("{}: {}".format(state.id, state.name))
+		print("{}".format(state))
+	cur.close()
+    conn.close()
