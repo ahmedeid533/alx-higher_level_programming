@@ -12,8 +12,8 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    opj = session.query(State).first()
-    if opj is None:
-        print("Nothing")
-    else:
-        print(opj.id, opj.name, sep=": ")
+    opj = session.query(State).filter(State.name == (sys.argv[4],))
+    try:
+        print(opj[0].id)
+    except IndexError:
+        print("Not found")
