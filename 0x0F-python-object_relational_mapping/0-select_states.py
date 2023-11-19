@@ -1,8 +1,11 @@
 #!/usr/bin/python3
-from sqlalchemy import create_engine
 import sys
+import MySQLdb
 
-engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(sys.argv[1], sys.argv[2], sys.argv[3]), pool_pre_ping=True)
-
-for state in engine["State"].order_by(engine["State"].id).all(): # HERE: no SQL query, only objects!
-    print("{}: {}".format(state.id, state.name))
+if __name__ == "__main__":
+	conn = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3], charset="utf8")
+	cur = conn.cursor()
+	cur.execute("SELECT * FROM states ORDER BY id ASC") # HERE I have to know SQL to grab all states in my database
+	query_rows = cur.fetchall()
+	for state in query_rows: # HERE: no SQL query, only objects!
+		print("{}: {}".format(state.id, state.name))
