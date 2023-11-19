@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """import modules"""
 import sys
 from sqlalchemy.orm import sessionmaker
@@ -11,8 +12,8 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    state = State(name='Louisiana')
-    session.add(state)
+    new_State = State(name='Louisiana')
+    session.add(new_State)
     new_opj = session.query(State).filter_by(name='Louisiana').first()
     print(new_opj.id)
     session.commit()
