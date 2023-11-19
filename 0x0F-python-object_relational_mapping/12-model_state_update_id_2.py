@@ -10,7 +10,7 @@ if __name__ == "__main__":
                            .format(sys.argv[1], sys.argv[2], sys.argv[3]))
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
-    opj = Session()
-    new_opj = opj.query(State).filter_by(id=2).first()
+    session = Session()
+    new_opj = session.query(State).filter_by(id=2).first()
     new_opj.name = 'New Mexico'
-    opj.commit()
+    session.commit()
