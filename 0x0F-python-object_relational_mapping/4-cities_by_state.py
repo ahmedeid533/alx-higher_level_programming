@@ -11,7 +11,7 @@ if __name__ == "__main__":
     cur.execute("SELECT cities.id, cities.name, states.name FROM \
                 cities INNER JOIN states ON states.id=cities.state_id")
     query_rows = cur.fetchall()
-    for state in query_rows:
-        print(state)
+    tmp_rows = list(row1[0] for row1 in query_rows)
+    print(*tmp_rows, sep=", ")
     cur.close()
     conn.close()
