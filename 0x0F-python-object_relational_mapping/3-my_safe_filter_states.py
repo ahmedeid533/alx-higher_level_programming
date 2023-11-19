@@ -9,7 +9,8 @@ if __name__ == "__main__":
                            passwd=sys.argv[2], db=sys.argv[3])
     cur = conn.cursor()
     search = sys.argv[4].split(';', 1)[0]
-    cur.execute("SELECT * FROM states WHERE name like '{}' ORDER BY states.id".format(search))
+    cur.execute("SELECT * FROM states WHERE name like '{}' \
+                 ORDER BY states.id".format(search))
     query_rows = cur.fetchall()
     for state in query_rows:
         print(state)
