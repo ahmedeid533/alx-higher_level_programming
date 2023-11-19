@@ -11,4 +11,4 @@ if __name__ == "__main__":
 	for state in query_rows: # HERE: no SQL query, only objects!
 		print(state)
 	cur.close()
-    conn.close()
+	conn.close()
