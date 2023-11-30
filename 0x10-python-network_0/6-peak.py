@@ -1,7 +1,9 @@
 #!/usr/bin/python3
+"""find peak"""
 
 
 def find_peak(list_of_integers):
+    """the func"""
 
     if list_of_integers is None or len(list_of_integers) == 0:
         return None
