@@ -9,21 +9,21 @@ def find_peak(list_of_integers):
     if len(list_of_integers) == 1:
         return list_of_integers[0]
 
-    idx = int(len(list_of_integers) / 2)
+    mid_idx = int(len(list_of_integers) / 2)
 
-    if idx != len(list_of_integers) - 1:
-        if list_of_integers[idx - 1] < list_of_integers[idx] and\
-           list_of_integers[idx + 1] < list_of_integers[idx]:
-            return list_of_integers[idx]
+    if mid_idx != len(list_of_integers) - 1:
+        if list_of_integers[mid_idx - 1] < list_of_integers[mid_idx] and\
+           list_of_integers[mid_idx + 1] < list_of_integers[mid_idx]:
+            return list_of_integers[mid_idx]
     else:
-        if list_of_integers[idx - 1] < list_of_integers[idx]:
-            return list_of_integers[idx]
+        if list_of_integers[mid_idx - 1] < list_of_integers[mid_idx]:
+            return list_of_integers[mid_idx]
         else:
-            return list_of_integers[idx - 1]
+            return list_of_integers[mid_idx - 1]
 
-    if list_of_integers[idx - 1] > list_of_integers[idx]:
-        list = list_of_integers[0:idx]
+    if list_of_integers[mid_idx - 1] > list_of_integers[mid_idx]:
+        a_list = list_of_integers[0:mid_idx]
     else:
-        list = list_of_integers[idx + 1:]
+        a_list = list_of_integers[mid_idx + 1:]
 
-    return find_peak(list)
+    return find_peak(a_list)
