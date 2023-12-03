@@ -11,5 +11,4 @@ if __name__ == "__main__":
     req = Request(
             argv[1], urlencode(dic).encode("ascii"))
     with urlopen(req) as res:
-        top = res.headers.get('X-Request-Id')
         print(res.read().decode('utf-8'))
