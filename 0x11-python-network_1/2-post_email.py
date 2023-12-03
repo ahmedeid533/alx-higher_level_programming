@@ -12,4 +12,4 @@ if __name__ == "__main__":
             argv[1], urlencode(dic).encode("ascii"))
     with urlopen(req) as res:
         top = res.headers.get('X-Request-Id')
-        print(top.read().decode('utf-8'))
+        print(res.read().decode('utf-8'))
